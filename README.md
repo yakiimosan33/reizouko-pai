@@ -22,7 +22,7 @@ npm run build
 Vercel に GitHub リポジトリを連携して、そのままデプロイできます。
 
 - Framework Preset: `Vite`
-- Install Command: `npm ci`
+- Install Command: `npm install`
 - Build Command: `npm run build`
 - Output Directory: `dist`
 - Node.js Version: `22.x`
