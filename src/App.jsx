@@ -234,16 +234,14 @@ function AppPhone() {
 
 function HeroVisual() {
   return (
-    <div className="relative min-h-[560px] overflow-hidden rounded-3xl bg-[#f4ecde] shadow-inner ring-1 ring-stone-200 lg:min-h-[690px]">
-      <div className="absolute inset-y-0 right-0 w-[48%] bg-[url('/image/image1.png')] bg-cover bg-right opacity-35 saturate-[0.8]" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,#fff8ec_0%,rgba(255,248,236,0.9)_40%,rgba(255,248,236,0.35)_100%)]" />
-
-      <div className="absolute right-10 top-12 hidden h-[470px] w-[260px] rounded-3xl bg-white/80 shadow-2xl ring-1 ring-stone-200 lg:block">
-        <div className="absolute left-7 right-7 top-7 h-[230px] rounded-2xl bg-white/80 ring-1 ring-stone-200" />
-        <div className="absolute bottom-8 left-7 right-7 h-[150px] rounded-2xl bg-white/70 ring-1 ring-stone-200" />
-        <div className="absolute right-8 top-24 h-28 w-2 rounded-full bg-stone-300" />
-        <div className="absolute right-8 bottom-28 h-20 w-2 rounded-full bg-stone-300" />
-      </div>
+    <div className="relative min-h-[560px] overflow-hidden rounded-3xl bg-[#f4ecde] shadow-[0_18px_50px_rgba(45,28,12,0.14)] ring-1 ring-stone-200 lg:min-h-[690px]">
+      <img
+        src="/sozai/sozai2.png"
+        alt="冷蔵庫の前でスマホアプリを使う女性とStockPi Liteの画面"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,#fff8ec_0%,rgba(255,248,236,0.78)_36%,rgba(255,248,236,0.12)_72%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,rgba(36,25,12,0.28),rgba(36,25,12,0))]" />
 
       <div className="absolute left-6 top-8 rounded-2xl border border-white/70 bg-white/90 px-5 py-4 shadow-sm backdrop-blur">
         <div className="flex items-center gap-3">
@@ -265,8 +263,11 @@ function HeroVisual() {
         </p>
       </div>
 
-      <div className="relative z-10 flex h-full items-center justify-center px-6 pt-24 lg:justify-center lg:px-10 lg:pt-12">
-        <AppPhone />
+      <div className="absolute bottom-8 left-6 hidden max-w-xs rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg backdrop-blur sm:block">
+        <p className="text-sm font-black text-emerald-800">買い物前に、すぐ確認。</p>
+        <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
+          在庫数・期限間近・買い物リストがスマホの画面にまとまります。
+        </p>
       </div>
     </div>
   );
@@ -388,7 +389,7 @@ export default function StockPiLiteLandingPage() {
 
       <section id="features" className="px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1500px] overflow-hidden rounded-3xl border border-stone-100 bg-white p-6 shadow-[0_12px_35px_rgba(40,25,10,0.08)] sm:p-9 lg:p-12">
-          <div className="grid gap-8 lg:grid-cols-[1fr_280px] xl:grid-cols-[1fr_340px]">
+          <div className="grid gap-8 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_430px]">
             <div>
               <SectionLabel>Core Features</SectionLabel>
               <h2 className="text-4xl font-black leading-tight tracking-normal sm:text-5xl">
@@ -401,9 +402,19 @@ export default function StockPiLiteLandingPage() {
                 ))}
               </div>
             </div>
-            <div className="hidden items-end justify-center lg:flex">
-              <div className="translate-y-20 scale-[0.78] xl:scale-90">
-                <AppPhone />
+            <div className="hidden items-stretch lg:flex">
+              <div className="relative min-h-[520px] w-full overflow-hidden rounded-3xl bg-[#f8f1e6] shadow-inner ring-1 ring-stone-100">
+                <img
+                  src="/sozai/sozai1.png"
+                  alt="野菜に囲まれたStockPi Liteのアプリ画面"
+                  className="h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(0deg,rgba(5,48,29,0.7),rgba(5,48,29,0))] p-6 pt-20">
+                  <p className="text-2xl font-black text-white">スマホで、ひと目で。</p>
+                  <p className="mt-2 text-sm font-bold leading-6 text-emerald-50">
+                    参考画像のように、在庫・期限・買い物を同じ画面に集約。
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -412,18 +423,55 @@ export default function StockPiLiteLandingPage() {
 
       <section id="value" className="px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-[1500px] gap-5 lg:grid-cols-[0.56fr_1.44fr]">
-          <div className="rounded-3xl border border-stone-100 bg-white p-8 shadow-[0_10px_30px_rgba(20,30,20,0.08)]">
-            <SectionLabel tone="orange">Why StockPi Lite?</SectionLabel>
-            <h2 className="text-4xl font-black leading-tight tracking-normal">
-              続けやすくて、<br />
-              <span className="text-emerald-800">うれしい価値を。</span>
-            </h2>
+          <div className="relative min-h-[360px] overflow-hidden rounded-3xl border border-stone-100 bg-emerald-950 p-8 shadow-[0_10px_30px_rgba(20,30,20,0.08)]">
+            <img
+              src="/sozai/sozai3.png"
+              alt="冷蔵庫の前でStockPi Liteを見せる女性"
+              className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(2,44,28,0.92),rgba(2,44,28,0.12))]" />
+            <div className="relative z-10 flex h-full flex-col justify-end">
+              <SectionLabel tone="orange">Why StockPi Lite?</SectionLabel>
+              <h2 className="text-4xl font-black leading-tight tracking-normal text-white">
+                続けやすくて、<br />
+                <span className="text-orange-300">うれしい価値を。</span>
+              </h2>
+              <p className="mt-4 text-base font-bold leading-7 text-emerald-50">
+                食材管理を、家の中でも買い物先でも自然に使えるスマホ体験へ。
+              </p>
+            </div>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {values.map(([Icon, title, text]) => (
               <FeatureCard key={title} icon={Icon} title={title} text={text} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-10 sm:px-8 lg:px-12">
+        <div className="relative mx-auto min-h-[420px] max-w-[1500px] overflow-hidden rounded-3xl bg-emerald-950 shadow-2xl shadow-emerald-950/20">
+          <img
+            src="/sozai/sozai4.png"
+            alt="家族でStockPi Liteを使いながら食材を確認している様子"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,44,28,0.9)_0%,rgba(2,44,28,0.62)_42%,rgba(2,44,28,0.1)_100%)]" />
+          <div className="relative z-10 flex min-h-[420px] max-w-2xl flex-col justify-center p-8 text-white sm:p-12 lg:p-16">
+            <SectionLabel tone="orange">Family Share</SectionLabel>
+            <h2 className="text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+              家族みんなで、<br />
+              同じリストを見る。
+            </h2>
+            <p className="mt-5 text-lg font-bold leading-8 text-emerald-50">
+              買い物前の確認も、帰宅後の登録も、家族で同じ情報を共有。参考LPの「家族みんなで簡単・便利」を写真で伝えます。
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Badge tone="dark"><UsersRound className="h-5 w-5" /> 家族共有</Badge>
+              <Badge tone="dark"><ShoppingCart className="h-5 w-5" /> 買い忘れ防止</Badge>
+              <Badge tone="dark"><Leaf className="h-5 w-5" /> 食品ロス削減</Badge>
+            </div>
           </div>
         </div>
       </section>
@@ -471,8 +519,14 @@ export default function StockPiLiteLandingPage() {
       </section>
 
       <section id="cta" className="px-5 py-12 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1400px] overflow-hidden rounded-3xl bg-emerald-950 p-8 text-white shadow-2xl shadow-emerald-950/25 sm:p-10 lg:p-12">
-          <div className="grid gap-8 lg:grid-cols-[0.35fr_1fr_0.32fr] lg:items-center">
+        <div className="relative mx-auto max-w-[1400px] overflow-hidden rounded-3xl bg-emerald-950 p-8 text-white shadow-2xl shadow-emerald-950/25 sm:p-10 lg:p-12">
+          <img
+            src="/sozai/sozai5.png"
+            alt="StockPi Liteのアプリ画面と買い物リストのイメージ"
+            className="absolute inset-0 h-full w-full object-cover object-center opacity-35"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(1,42,26,0.96),rgba(1,42,26,0.86),rgba(1,42,26,0.45))]" />
+          <div className="relative z-10 grid gap-8 lg:grid-cols-[0.35fr_1fr_0.32fr] lg:items-center">
             <Logo light compact />
             <div className="border-white/30 lg:border-l lg:pl-10">
               <h2 className="text-3xl font-black leading-tight sm:text-5xl">
