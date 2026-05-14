@@ -234,23 +234,23 @@ function AppPhone() {
 
 function HeroVisual() {
   return (
-    <div className="relative min-h-[560px] overflow-hidden rounded-3xl bg-[#f4ecde] shadow-[0_18px_50px_rgba(45,28,12,0.14)] ring-1 ring-stone-200 lg:min-h-[690px]">
+    <div className="relative min-h-[360px] overflow-hidden rounded-3xl bg-[#f4ecde] shadow-[0_18px_50px_rgba(45,28,12,0.14)] ring-1 ring-stone-200 sm:min-h-[520px] lg:min-h-[690px]">
       <img
         src="/sozai/sozai2.png"
         alt="冷蔵庫の前でスマホアプリを使う女性とStockPi Liteの画面"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[58%_center] lg:object-center"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,#fff8ec_0%,rgba(255,248,236,0.78)_36%,rgba(255,248,236,0.12)_72%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,rgba(36,25,12,0.28),rgba(36,25,12,0))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,248,236,0.9)_0%,rgba(255,248,236,0.56)_38%,rgba(255,248,236,0.08)_72%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(0deg,rgba(16,48,32,0.42),rgba(16,48,32,0))]" />
 
-      <div className="absolute left-6 top-8 rounded-2xl border border-white/70 bg-white/90 px-5 py-4 shadow-sm backdrop-blur">
+      <div className="absolute left-4 top-4 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur sm:left-6 sm:top-8 sm:px-5 sm:py-4">
         <div className="flex items-center gap-3">
-          <div className="grid h-12 w-12 place-items-center rounded-xl bg-orange-50 text-orange-600">
-            <CheckCircle2 className="h-7 w-7" />
+          <div className="grid h-10 w-10 place-items-center rounded-xl bg-orange-50 text-orange-600 sm:h-12 sm:w-12">
+            <CheckCircle2 className="h-6 w-6 sm:h-7 sm:w-7" />
           </div>
           <div>
             <p className="text-sm font-black text-zinc-950">スマホ完結</p>
-            <p className="text-xs font-bold text-zinc-500">いつでも在庫を確認できる</p>
+            <p className="hidden text-xs font-bold text-zinc-500 sm:block">いつでも在庫を確認できる</p>
           </div>
         </div>
       </div>
@@ -263,9 +263,9 @@ function HeroVisual() {
         </p>
       </div>
 
-      <div className="absolute bottom-8 left-6 hidden max-w-xs rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg backdrop-blur sm:block">
+      <div className="absolute bottom-5 left-4 max-w-[260px] rounded-2xl border border-white/70 bg-white/90 p-4 shadow-lg backdrop-blur sm:bottom-8 sm:left-6 sm:max-w-xs sm:p-5">
         <p className="text-sm font-black text-emerald-800">買い物前に、すぐ確認。</p>
-        <p className="mt-2 text-sm font-bold leading-6 text-zinc-700">
+        <p className="mt-2 text-xs font-bold leading-5 text-zinc-700 sm:text-sm sm:leading-6">
           在庫数・期限間近・買い物リストがスマホの画面にまとまります。
         </p>
       </div>
@@ -325,6 +325,10 @@ export default function StockPiLiteLandingPage() {
               StockPi Liteは、スマホひとつで冷蔵庫管理をラクにするアプリです。買いすぎ、期限切れ、買い忘れを日々の画面で減らします。
             </p>
 
+            <div className="mt-7 lg:hidden">
+              <HeroVisual />
+            </div>
+
             <div className="mt-7 grid max-w-3xl gap-4 sm:grid-cols-3">
               {features.map(({ icon: Icon, title, text }, index) => (
                 <div key={title} className="rounded-2xl border border-stone-100 bg-white p-5 text-center shadow-[0_10px_25px_rgba(25,20,10,0.08)]">
@@ -356,7 +360,9 @@ export default function StockPiLiteLandingPage() {
             </div>
           </div>
 
-          <HeroVisual />
+          <div className="hidden lg:block">
+            <HeroVisual />
+          </div>
         </div>
       </section>
 
@@ -412,7 +418,7 @@ export default function StockPiLiteLandingPage() {
                 <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(0deg,rgba(5,48,29,0.7),rgba(5,48,29,0))] p-6 pt-20">
                   <p className="text-2xl font-black text-white">スマホで、ひと目で。</p>
                   <p className="mt-2 text-sm font-bold leading-6 text-emerald-50">
-                    参考画像のように、在庫・期限・買い物を同じ画面に集約。
+                    在庫・期限・買い物を同じ画面に集約。
                   </p>
                 </div>
               </div>
@@ -465,7 +471,7 @@ export default function StockPiLiteLandingPage() {
               同じリストを見る。
             </h2>
             <p className="mt-5 text-lg font-bold leading-8 text-emerald-50">
-              買い物前の確認も、帰宅後の登録も、家族で同じ情報を共有。参考LPの「家族みんなで簡単・便利」を写真で伝えます。
+              買い物前の確認も、帰宅後の登録も、家族で同じ情報を共有。誰が買っても、同じリストに反映されます。
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Badge tone="dark"><UsersRound className="h-5 w-5" /> 家族共有</Badge>
